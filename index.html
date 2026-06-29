@@ -84,7 +84,6 @@
       "url": "https://www.subarudalton.com/",
       "image": "https://www.subarudalton.com/img/dalton-subaru-national-city-storefront.jpg",
       "logo": "https://www.subarudalton.com/img/dalton-subaru-national-city-logo.png",
-      "telephone": "+1-619-470-5600",
       "priceRange": "$$",
       "parentOrganization": { "@type": "Organization", "name": "Dalton Corporation" },
       "address": {
@@ -105,7 +104,7 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "08:00",
+          "opens": "08:30",
           "closes": "20:00"
         },
         {
@@ -118,13 +117,11 @@
       "department": [
         {
           "@type": "AutoRepair",
-          "name": "Dalton Subaru National City Service",
-          "telephone": "+1-619-470-5600"
+          "name": "Dalton Subaru National City Service"
         },
         {
           "@type": "AutoPartsStore",
-          "name": "Dalton Subaru National City Parts",
-          "telephone": "+1-619-470-5600"
+          "name": "Dalton Subaru National City Parts"
         }
       ],
       "areaServed": [
@@ -138,7 +135,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
-        "reviewCount": 4400
+        "reviewCount": 4426
       },
       "award": [
         "Subaru Love Promise community commitment"
@@ -153,7 +150,7 @@
           "name": "Where can I find a Subaru for sale second hand in National City?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At Dalton Subaru National City, 2829 National City Blvd, on the Mile of Cars. The lot carries both used and Subaru Certified Pre-Owned models. Browse current inventory at subarudalton.com or call 619-470-5600."
+            "text": "At Dalton Subaru National City, 2829 National City Blvd, on the Mile of Cars. The lot carries both used and Subaru Certified Pre-Owned models. Browse current inventory at subarudalton.com, then reach the team through the official Dalton Subaru Contact Portal at subarudalton.com/contactus.aspx."
           }
         },
         {
@@ -185,7 +182,7 @@
           "name": "Can you inspect a used Subaru I'm considering from another seller?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Our service team will run a pre-purchase inspection on a Subaru you're looking at elsewhere. It's the single best money you can spend before buying any second-hand car. Call 619-470-5600 to set it up."
+            "text": "Yes. Our service team will run a pre-purchase inspection on a Subaru you're looking at elsewhere. It's the single best money you can spend before buying any second-hand car. Reach the team through the official Dalton Subaru Contact Portal at subarudalton.com/contactus.aspx to set it up."
           }
         },
         {
@@ -201,7 +198,7 @@
           "name": "Is Dalton Subaru National City a legit place to buy second hand?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. It's an established Subaru dealership at 2829 National City Blvd holding a 4.7-star Google rating across roughly 4,400+ reviews, the same team local drivers knew as Frank Subaru, now part of the Dalton Corporation, serving National City, Chula Vista, and San Diego County."
+            "text": "Yes. It's an established Subaru dealership at 2829 National City Blvd holding a 4.7-star Google rating across 4,426 reviews, the same team local drivers knew as Frank Subaru, now part of the Dalton Corporation, serving National City, Chula Vista, and San Diego County."
           }
         },
         {
@@ -217,7 +214,7 @@
           "name": "What are your sales hours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sales is open Monday–Saturday 8:00 AM–8:00 PM and Sunday 10:00 AM–6:00 PM."
+            "text": "Sales is open Monday–Saturday 8:30 AM–8:00 PM and Sunday 10:00 AM–6:00 PM."
           }
         }
       ]
@@ -622,12 +619,12 @@
     border-bottom: 1px solid var(--ink);
     margin: 36px 0 28px;
   }
-  .spec-strip .item { padding: 24px 16px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; min-width: 0; }
+  .spec-strip .item { padding: 24px 16px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; }
   .spec-strip .item:first-child { padding-left: 0; }
   .spec-strip .item:last-child { border-right: none; padding-right: 0; }
   .spec-strip .num { font-family: var(--display); font-size: 38px; font-weight: 600; line-height: 1.05; color: var(--blue-deep); letter-spacing: -0.015em; font-feature-settings: "lnum"; min-height: calc(38px * 1.05); margin-bottom: 14px; white-space: nowrap; }
   .spec-strip .num small { font-size: 14px; color: var(--ink-soft); font-weight: 400; margin-left: 3px; letter-spacing: 0; }
-  .spec-strip .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 0; line-height: 1.5; min-height: calc(11px * 1.5 * 2); display: flex; align-items: flex-start; }
+  .spec-strip .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 0; line-height: 1.5; min-height: calc(11px * 1.5 * 2); display: flex; align-items: flex-start; justify-content: center; text-align: center; }
 
   /* Stats variant: short numeric headers, bigger type, centered, modest breakout */
   .spec-strip.stats {
@@ -1298,9 +1295,9 @@
 
     <div class="hero-meta">
       <div class="item"><div class="lbl">Address</div><div class="val">2829 National City Blvd<small>National City, CA 91950</small></div></div>
-      <div class="item"><div class="lbl">Sales Hours</div><div class="val">Mon-Sat 8-8<small>Sun 10-6</small></div></div>
-      <div class="item"><div class="lbl">Call</div><div class="val"><a class="tel" href="tel:+16194705600">619-470-5600</a><small>Mile of Cars · National City</small></div></div>
-      <div class="item"><div class="lbl">Reviews</div><div class="val">4.7 ★ · ≈4,400+<small>Google · Dalton Subaru</small></div></div>
+      <div class="item"><div class="lbl">Sales Hours</div><div class="val">Mon-Sat 8:30-8<small>Sun 10-6</small></div></div>
+      <div class="item"><div class="lbl">Contact</div><div class="val"><a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a><small>Mile of Cars · National City</small></div></div>
+      <div class="item"><div class="lbl">Reviews</div><div class="val">4.7 ★ · 4,426<small>Google · Dalton Subaru</small></div></div>
     </div>
   </div>
 
@@ -1360,7 +1357,7 @@
           We park a budget-friendly used model next to its CPO equivalent so you see the real trade-off before you commit, not after.
         </blockquote>
 
-        <p style="font-size:12px; color:var(--muted); letter-spacing:0.02em; line-height:1.6; border-top:1px solid var(--rule-soft); padding-top:18px; margin-top:24px;"><strong style="color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-size:10px;">Note ·</strong> Used and CPO inventory turns over constantly. The fastest way to confirm what's physically on our lot today is to check the <a href="https://www.subarudalton.com/searchused.aspx">current second-hand inventory</a> at subarudalton.com or call <a class="tel" href="tel:+16194705600">619-470-5600</a>. <em>Reviewed and posted by the Dalton Subaru National City Pre-Owned Team.</em></p>
+        <p style="font-size:12px; color:var(--muted); letter-spacing:0.02em; line-height:1.6; border-top:1px solid var(--rule-soft); padding-top:18px; margin-top:24px;"><strong style="color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-size:10px;">Note ·</strong> Used and CPO inventory turns over constantly. The fastest way to confirm what's physically on our lot today is to check the <a href="https://www.subarudalton.com/searchused.aspx">current second-hand inventory</a> at subarudalton.com or reach the team through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>. <em>Reviewed and posted by the Dalton Subaru National City Pre-Owned Team.</em></p>
       </section>
 
       <!-- §02 What "Certified Pre-Owned" Actually Means -->
@@ -1396,7 +1393,7 @@
         <p>General Manager Antonio Luna and Service &amp; Parts Director Rick Griffin run the same shop that will be changing your oil and rotating your tires two years from now. That continuity is the quiet advantage of buying second-hand from a franchised store instead of a one-and-done lot: the people who sold you the car still have to look you in the eye at the service drive.</p>
 
         <h3>A track record you can check first</h3>
-        <p>Dalton Subaru National City holds a 4.7-star Google rating across roughly ≈4,400+ reviews. On a used buy, seller reputation is the whole ballgame, so read the reviews, then come look at the inventory in person. We won't paraphrase what customers say; go read the reviews yourself and form your own view. The rating is public, current, and not something we can edit.</p>
+        <p>Dalton Subaru National City holds a 4.7-star Google rating across 4,426 reviews. On a used buy, seller reputation is the whole ballgame, so read the reviews, then come look at the inventory in person. We won't paraphrase what customers say; go read the reviews yourself and form your own view. The rating is public, current, and not something we can edit.</p>
 
         <h3>One visit, not a weekend</h3>
         <p>Because every second-hand Subaru, used and CPO, is parked at 2829 National City Blvd, you're not chasing listings across the county. You compare them in front of you. That turns a multi-stop search into one focused afternoon.</p>
@@ -1444,16 +1441,16 @@
       <aside class="cta-inline" aria-labelledby="cta-inline-heading">
         <div class="eyebrow">Dalton Subaru National City</div>
         <h3 id="cta-inline-heading">Compare used and CPO Subarus on the Mile of Cars.</h3>
-        <p class="lede">Come in and we'll line a budget-friendly used model up next to its CPO equivalent, pull both vehicle history reports, and run the real numbers side by side. Ask for that comparison when you call.</p>
+        <p class="lede">Come in and we'll line a budget-friendly used model up next to its CPO equivalent, pull both vehicle history reports, and run the real numbers side by side. Ask for that comparison when you reach out.</p>
         <div class="actions">
           <a class="btn primary" href="https://www.subarudalton.com/searchused.aspx">Browse second-hand inventory <span class="arrow">→</span></a>
-          <a class="btn ghost" href="tel:+16194705600">Call 619-470-5600</a>
+          <a class="btn ghost" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>
         </div>
         <div class="meta">
           <div class="meta-item"><span class="k">Address</span><span class="v">2829 National City Blvd, National City CA</span></div>
-          <div class="meta-item"><span class="k">Call</span><span class="v"><a class="tel" href="tel:+16194705600">619-470-5600</a></span></div>
-          <div class="meta-item"><span class="k">Reviews</span><span class="v">4.7 ★ · ≈4,400+ Google</span></div>
-          <div class="meta-item"><span class="k">Hours</span><span class="v">Mon-Sat 8-8 · Sun 10-6</span></div>
+          <div class="meta-item"><span class="k">Contact</span><span class="v"><a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a></span></div>
+          <div class="meta-item"><span class="k">Reviews</span><span class="v">4.7 ★ · 4,426 Google</span></div>
+          <div class="meta-item"><span class="k">Hours</span><span class="v">Mon-Sat 8:30-8 · Sun 10-6</span></div>
         </div>
       </aside>
 
@@ -1490,7 +1487,7 @@
           We pulled the service history on a 2019 Forester trade-in and found two skipped coolant services. The car ran fine, but we flushed the system and replaced the thermostat before it went on the line. That's the work that never shows up in a listing photo.
         </blockquote>
 
-        <p>That's why we'd tell you to ask any second-hand seller, here or anywhere, for the maintenance records before you sign. If a used Subaru you're looking at elsewhere doesn't come with service history and the seller can't explain the gaps, that's a reason to slow down, not a reason to panic, but a reason to budget for an immediate fluid-and-belts service. We'll happily run a pre-purchase inspection on a car you're considering, even one you didn't find on our lot. Call <a class="tel" href="tel:+16194705600">619-470-5600</a> to set it up.</p>
+        <p>That's why we'd tell you to ask any second-hand seller, here or anywhere, for the maintenance records before you sign. If a used Subaru you're looking at elsewhere doesn't come with service history and the seller can't explain the gaps, that's a reason to slow down, not a reason to panic, but a reason to budget for an immediate fluid-and-belts service. We'll happily run a pre-purchase inspection on a car you're considering, even one you didn't find on our lot. Reach the team through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a> to set it up.</p>
       </section>
 
       <!-- §06 Used vs. Certified Pre-Owned: Which Lane Is Right for You -->
@@ -1595,7 +1592,7 @@
         <p class="lede">We are at <strong>2829 National City Blvd, National City, CA 91950</strong>, on the National City Mile of Cars, serving National City, Chula Vista, and San Diego County. Buying here is meant to be short and clear. Here's what it looks like end to end.</p>
 
         <div class="spec-strip stats">
-          <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Google rating across ≈4,400+ reviews</div></div>
+          <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Google rating across 4,426 reviews</div></div>
           <div class="item"><div class="num">152<small>-pt</small></div><div class="lbl">Subaru inspection on every CPO unit</div></div>
           <div class="item"><div class="num">5<small> models</small></div><div class="lbl">Outback, Forester, Crosstrek, Impreza, Ascent</div></div>
           <div class="item"><div class="num">Love</div><div class="lbl">Subaru Love Promise community commitment</div></div>
@@ -1613,11 +1610,11 @@
         <ul class="bullets">
           <li><strong>Browse second-hand inventory</strong>, used and CPO, at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a></li>
           <li><strong>Visit the showroom</strong> at 2829 National City Blvd, National City, CA 91950, on the Mile of Cars</li>
-          <li><strong>Call</strong> <a class="tel" href="tel:+16194705600">619-470-5600</a> to confirm a specific car is on the ground</li>
+          <li><strong>Reach out</strong> through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a> to confirm a specific car is on the ground</li>
           <li><strong>Ask for a pre-purchase inspection</strong> on a Subaru you're considering, even one you found elsewhere</li>
         </ul>
 
-        <p>Sales is open Monday through Saturday, 8:00 AM to 8:00 PM, and Sunday from 10:00 AM to 6:00 PM, so a second-hand Subaru hunt fits a work week or a weekend just as easily. Our address is 2829 National City Blvd, National City, CA 91950, and you can reach the team at <a class="tel" href="tel:+16194705600">619-470-5600</a>.</p>
+        <p>Sales is open Monday through Saturday, 8:30 AM to 8:00 PM, and Sunday from 10:00 AM to 6:00 PM, so a second-hand Subaru hunt fits a work week or a weekend just as easily. Our address is 2829 National City Blvd, National City, CA 91950, and you can reach the team through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>.</p>
       </section>
     </div>
 
@@ -1627,11 +1624,11 @@
         <div class="lbl">Google rating</div>
         <div class="stars">★★★★★</div>
         <strong style="font-size:28px;">4.7</strong>
-        <div class="sub">Across ≈4,400+ customer reviews</div>
+        <div class="sub">Across 4,426 customer reviews</div>
       </div>
       <div class="chip">
-        <div class="lbl">Call us</div>
-        <a class="tel" href="tel:+16194705600"><strong style="font-family:var(--display); font-size:22px;">619-470-5600</strong></a>
+        <div class="lbl">Contact</div>
+        <a class="tel" href="https://www.subarudalton.com/contactus.aspx"><strong style="font-family:var(--display); font-size:18px; line-height:1.2;">Dalton Subaru Contact Portal</strong></a>
         <div class="sub">Confirm a car on the lot · book a visit</div>
       </div>
       <div class="chip">
@@ -1653,12 +1650,12 @@
   <div class="wrap">
     <div class="eyebrow">Dalton Subaru National City</div>
     <h2>Deep roots on the <em>Mile of Cars</em>.</h2>
-    <p class="band-deck">The same store local owners knew as Frank Subaru, now operating as Dalton Subaru National City under the Dalton Corporation: same people, same service drive, same phone line. We serve National City, Chula Vista, and the wider San Diego County area.</p>
+    <p class="band-deck">The same store local owners knew as Frank Subaru, now operating as Dalton Subaru National City under the Dalton Corporation: same people, same service drive, same team. We serve National City, Chula Vista, and the wider San Diego County area.</p>
 
     <div class="trust-grid">
       <div class="item">
         <div class="num">4.7<small> ★</small></div>
-        <div class="lbl">Google rating across<br>≈4,400+ reviews</div>
+        <div class="lbl">Google rating across<br>4,426 reviews</div>
       </div>
       <div class="item">
         <div class="num">152<small>-pt</small></div>
@@ -1689,8 +1686,8 @@
       </div>
       <div>
         <h5>Hours &amp; contact</h5>
-        <p><strong>Sales</strong> Mon-Sat 8 AM-8 PM<br><strong>Sunday</strong> 10 AM-6 PM</p>
-        <p><strong>Call</strong> <a class="tel" href="tel:+16194705600">619-470-5600</a></p>
+        <p><strong>Sales</strong> Mon-Sat 8:30 AM-8 PM<br><strong>Sunday</strong> 10 AM-6 PM</p>
+        <p><strong>Contact</strong> <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a></p>
         <p><strong>Online</strong> <a class="tel" href="https://www.subarudalton.com/" rel="noopener">subarudalton.com</a></p>
         <p>2829 National City Blvd, National City, CA 91950.</p>
       </div>
@@ -1719,7 +1716,7 @@
             <summary>Where can I find a Subaru for sale second hand in National City?</summary>
             <div class="answer">
               <p>At Dalton Subaru National City, 2829 National City Blvd, on the Mile of Cars. The lot carries both used and Subaru Certified Pre-Owned models.</p>
-              <p>Browse current inventory at subarudalton.com or call <a class="tel" href="tel:+16194705600">619-470-5600</a>.</p>
+              <p>Browse current inventory at subarudalton.com, then reach the team through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>.</p>
             </div>
           </details>
 
@@ -1751,7 +1748,7 @@
             <summary>Can you inspect a used Subaru I'm considering from another seller?</summary>
             <div class="answer">
               <p>Yes. Our service team will run a pre-purchase inspection on a Subaru you're looking at elsewhere. It's the single best money you can spend before buying any second-hand car.</p>
-              <p>Call <a class="tel" href="tel:+16194705600">619-470-5600</a> to set it up.</p>
+              <p>Reach the team through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a> to set it up.</p>
             </div>
           </details>
 
@@ -1766,7 +1763,7 @@
           <details>
             <summary>Is Dalton Subaru National City a legit place to buy second hand?</summary>
             <div class="answer">
-              <p>Yes. It's an established Subaru dealership at 2829 National City Blvd holding a 4.7-star Google rating across roughly ≈4,400+ reviews, the same team local drivers knew as Frank Subaru, now part of the Dalton Corporation, serving National City, Chula Vista, and San Diego County.</p>
+              <p>Yes. It's an established Subaru dealership at 2829 National City Blvd holding a 4.7-star Google rating across 4,426 reviews, the same team local drivers knew as Frank Subaru, now part of the Dalton Corporation, serving National City, Chula Vista, and San Diego County.</p>
             </div>
           </details>
 
@@ -1780,7 +1777,7 @@
           <details>
             <summary>What are your sales hours?</summary>
             <div class="answer">
-              <p>Sales is open Monday–Saturday 8:00 AM–8:00 PM and Sunday 10:00 AM–6:00 PM.</p>
+              <p>Sales is open Monday–Saturday 8:30 AM–8:00 PM and Sunday 10:00 AM–6:00 PM.</p>
             </div>
           </details>
         </div>
@@ -1789,13 +1786,13 @@
 
     <aside class="gutter" aria-label="Quick contact">
       <div class="chip">
-        <div class="lbl">Call us</div>
-        <a class="tel" href="tel:+16194705600"><strong style="font-family:var(--display); font-size:24px;">619-470-5600</strong></a>
-        <div class="sub">Mon-Sat 8-8 · Sun 10-6 · Confirm a car on the lot</div>
+        <div class="lbl">Contact</div>
+        <a class="tel" href="https://www.subarudalton.com/contactus.aspx"><strong style="font-family:var(--display); font-size:18px; line-height:1.2;">Dalton Subaru Contact Portal</strong></a>
+        <div class="sub">Mon-Sat 8:30-8 · Sun 10-6 · Confirm a car on the lot</div>
       </div>
       <div class="chip">
         <div class="lbl">Service &amp; Parts</div>
-        <a class="tel" href="tel:+16194705600"><strong style="font-family:var(--display); font-size:24px;">619-470-5600</strong></a>
+        <a class="tel" href="https://www.subarudalton.com/contactus.aspx"><strong style="font-family:var(--display); font-size:18px; line-height:1.2;">Dalton Subaru Contact Portal</strong></a>
         <div class="sub">Led by Rick Griffin · pre-purchase inspections</div>
       </div>
       <div class="chip">
@@ -1829,9 +1826,9 @@
           <div style="font-size:12px; color:var(--muted); margin-top:10px; letter-spacing:0.04em;">Dalton Subaru National City · 2829 National City Blvd, National City, CA 91950</div>
         </div>
 
-        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">Subaru Certified Pre-Owned program terms (the 152-point inspection, age and mileage eligibility, and the 7-year/100,000-mile powertrain warranty measured from the original in-service date) are published by Subaru of America at subaru.com and should be confirmed there. Fuel-economy figures are EPA estimates from fueleconomy.gov; safety ratings and open recalls by VIN should be verified at nhtsa.gov and iihs.org. Used and CPO inventory, pricing, and individual vehicle history change constantly and should be re-verified before any deal is signed. For a specific second-hand Subaru, call Sales at <a class="tel" href="tel:+16194705600"><strong>619-470-5600</strong></a>.</p>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">Subaru Certified Pre-Owned program terms (the 152-point inspection, age and mileage eligibility, and the 7-year/100,000-mile powertrain warranty measured from the original in-service date) are published by Subaru of America at subaru.com and should be confirmed there. Fuel-economy figures are EPA estimates from fueleconomy.gov; safety ratings and open recalls by VIN should be verified at nhtsa.gov and iihs.org. Used and CPO inventory, pricing, and individual vehicle history change constantly and should be re-verified before any deal is signed. For a specific second-hand Subaru, reach Sales through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx"><strong>Dalton Subaru Contact Portal</strong></a>.</p>
 
-        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;"><em>If a question about buying a Subaru second hand at Dalton Subaru National City is not answered here, call a sales advisor at <a class="tel" href="tel:+16194705600">619-470-5600</a>, or browse current used and CPO inventory at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a>.</em></p>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;"><em>If a question about buying a Subaru second hand at Dalton Subaru National City is not answered here, reach a sales advisor through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>, or browse current used and CPO inventory at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a>.</em></p>
 
         <ul class="ext">
           <li><a href="https://www.subaru.com" rel="noopener" target="_blank">Subaru of America · Certified Pre-Owned program terms, 152-point inspection, and powertrain warranty</a></li>
@@ -1854,13 +1851,13 @@
     <p>Browse current second-hand inventory, used and CPO, at subarudalton.com, then visit Dalton Subaru National City at 2829 National City Blvd to drive your top picks. We'll show you the real numbers, not just the sticker.</p>
     <div class="actions">
       <a class="btn primary" href="https://www.subarudalton.com/searchused.aspx">Browse second-hand inventory <span class="arrow">→</span></a>
-      <a class="btn ghost" href="tel:+16194705600">Call 619-470-5600</a>
-      <a class="btn ghost" href="https://www.subarudalton.com/" rel="noopener">Dalton Subaru National City</a>
+      <a class="btn ghost" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>
+      <a class="btn ghost" href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x80d952125112d925:0xaf395218d244e259!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF" rel="noopener">Get Direction</a>
     </div>
     <div class="phones">
-      <span>Call <a class="tel" href="tel:+16194705600"><strong>619-470-5600</strong></a></span>
+      <span>Contact <a class="tel" href="https://www.subarudalton.com/contactus.aspx"><strong>Dalton Subaru Contact Portal</strong></a></span>
       <span>Online <a class="tel" href="https://www.subarudalton.com/" rel="noopener"><strong>subarudalton.com</strong></a></span>
-      <span>Hours <strong>Mon-Sat 8-8 · Sun 10-6</strong></span>
+      <span>Hours <strong>Mon-Sat 8:30-8 · Sun 10-6</strong></span>
       <span>Visit <a class="tel" href="https://maps.google.com/?q=2829+National+City+Blvd+National+City+CA+91950" rel="noopener"><strong>2829 National City Blvd</strong></a></span>
     </div>
   </div>
