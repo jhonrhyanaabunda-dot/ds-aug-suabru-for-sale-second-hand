@@ -42,6 +42,16 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "VideoObject",
+      "@id": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/#video-gm",
+      "name": "Antonio Luna, General Manager — Dalton Subaru National City",
+      "description": "Antonio Luna, general manager of Dalton Subaru National City, introducing the store from the Mile of Cars and talking through Subaru reliability.",
+      "thumbnailUrl": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/gm-antonio-luna-poster.jpg",
+      "uploadDate": "2026-08-01",
+      "contentUrl": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/gm-antonio-luna.mp4",
+      "publisher": { "@id": "https://www.subarudalton.com/#dealer" }
+    },
+    {
       "@type": "Article",
       "@id": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/#article",
       "headline": "Subaru For Sale Second Hand in National City",
@@ -1280,6 +1290,33 @@
     }
     .btn:hover .arrow { transform: none; }
   }
+
+  /* ---------- July-template: hero CTA buttons ---------- */
+  .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 0 0 32px; }
+  .hero-cta a { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 600; font-size: 16px; text-decoration: none; border-radius: 999px; padding: 14px 28px; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+  .hero-cta a.primary { background: var(--blue); color: #fff; border: 1px solid var(--blue); }
+  .hero-cta a.primary:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+  .hero-cta a.secondary { background: transparent; color: var(--blue); border: 1px solid var(--rule); }
+  .hero-cta a.secondary:hover { border-color: var(--blue); color: var(--blue-deep); }
+  .hero-cta .arrow { transition: transform .2s ease; }
+  .hero-cta a:hover .arrow { transform: translateX(3px); }
+
+  /* ---------- July-template: disclosures ---------- */
+  .disclosures {
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    padding: 40px 0 64px;
+  }
+  .disclosures .wrap { max-width: 920px; }
+  .disclosures h4 {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700; margin: 0 0 16px;
+  }
+  .disclosures p, .disclosures li {
+    font-size: 12.5px; line-height: 1.65; color: var(--muted); margin: 0 0 12px;
+  }
+  .disclosures ul { padding-left: 18px; margin: 0; }
+  .disclosures strong { color: var(--ink-soft); }
 </style>
 </head>
 <body>
@@ -1291,13 +1328,11 @@
   <div class="wrap">
     <div class="eyebrow"><span class="pip"></span> Pre-Owned Sales · Dalton Subaru National City</div>
     <h1>A <em>Subaru for sale second hand</em>, all on one lot in National City.</h1>
-    <p class="deck">Used and Subaru Certified Pre-Owned Outback, Forester, Crosstrek, Impreza, and Ascent models on a rotating lot at 2829 National City Blvd on the Mile of Cars. Browse current second-hand inventory at subarudalton.com, then drive your shortlist back to back in one visit.</p>
+    <p class="deck">Both park at 2829 National City Blvd on the Mile of Cars. Used and Certified Pre-Owned sit in the same rows, so you can drive a used Outback against a CPO Forester the same afternoon.</p>
 
-    <div class="hero-meta">
-      <div class="item"><div class="lbl">Address</div><div class="val">2829 National City Blvd<small>National City, CA 91950</small></div></div>
-      <div class="item"><div class="lbl">Sales Hours</div><div class="val">Mon-Sat 8:30-8<small>Sun 10-6</small></div></div>
-      <div class="item"><div class="lbl">Contact</div><div class="val"><a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a><small>Mile of Cars · National City</small></div></div>
-      <div class="item"><div class="lbl">Reviews</div><div class="val">4.7 ★ · 4,426<small>Google · Dalton Subaru</small></div></div>
+    <div class="hero-cta">
+      <a class="primary" href="https://www.subarudalton.com/searchused.aspx">Browse second-hand inventory <span class="arrow">&rarr;</span></a>
+      <a class="secondary" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>
     </div>
   </div>
 
@@ -1313,6 +1348,17 @@
     <figcaption class="visually-hidden">Used and Subaru Certified Pre-Owned vehicles at Dalton Subaru National City on the National City Mile of Cars, serving San Diego County.</figcaption>
   </figure>
 </header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="https://www.subarudalton.com/">Home</a></li>
+      <li><a href="https://www.subarudalton.com/searchused-national-city-ca.aspx">Inventory</a></li>
+      <li aria-current="page">Second-Hand Subarus in National City</li>
+    </ol>
+  </div>
+</nav>
+
 
 <!-- ARTICLE BODY -->
 <main class="wrap" id="main-content">
@@ -1358,6 +1404,13 @@
         </blockquote>
 
         <p style="font-size:12px; color:var(--muted); letter-spacing:0.02em; line-height:1.6; border-top:1px solid var(--rule-soft); padding-top:18px; margin-top:24px;"><strong style="color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-size:10px;">Note ·</strong> Used and CPO inventory turns over constantly. The fastest way to confirm what's physically on our lot today is to check the <a href="https://www.subarudalton.com/searchused.aspx">current second-hand inventory</a> at subarudalton.com or reach the team through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>. <em>Reviewed and posted by the Dalton Subaru National City Pre-Owned Team.</em></p>
+      
+        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
+          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
+            <img src="used-forester-lot.webp" alt="Side profile of a red used Subaru Forester Limited on the Dalton Subaru National City used-car lot, showing alloy wheels and roof rails" loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 50%;">
+          </div>
+          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">A used Forester Limited in our rows at 2829 National City Blvd. Standard and Certified Pre-Owned units park together here, which is what makes the back-to-back drive possible.</figcaption>
+        </figure>
       </section>
 
       <!-- §02 What "Certified Pre-Owned" Actually Means -->
@@ -1387,6 +1440,18 @@
         <div class="section-num"><span>03</span><span>Why buy here</span></div>
         <h2 class="section-h">Why shop second-hand <em>Subarus here</em>.</h2>
         <p class="lede">San Diego County has no shortage of pre-owned Subaru listings. Here's what makes the Dalton Subaru lot worth the drive to National City.</p>
+        <figure class="section-image" id="video-gm" style="margin:32px 0 28px;display:flex;flex-direction:column;align-items:center;">
+          <div style="width:100%;max-width:340px;aspect-ratio:9/16;overflow:hidden;border-radius:16px;background:#000;">
+            <video
+              src="gm-antonio-luna.mp4"
+              poster="gm-antonio-luna-poster.jpg"
+              controls playsinline preload="none"
+              style="width:100%;height:100%;display:block;object-fit:cover;background:#000;"
+              aria-label="Antonio Luna, general manager of Dalton Subaru National City, outside the showroom on the Mile of Cars"></video>
+          </div>
+          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:center;max-width:60ch;">Antonio Luna, general manager of Dalton Subaru National City, outside the showroom on the Mile of Cars. Every second-hand Subaru on the lot is reconditioned by the same team before it is listed.</figcaption>
+        </figure>
+
 
         <h3>The same team you already trusted</h3>
         <p>Dalton Subaru National City sits in the same spot on the National City Mile of Cars that local drivers knew for years as Frank Subaru. The store is now part of the Dalton Corporation, but the crew on the floor didn't change. It's the same team that has served National City and Chula Vista shoppers, now under the Dalton name. On a second-hand purchase, who you buy from matters as much as what you buy, and this is a team that'll still be here for your first service appointment.</p>
@@ -1435,6 +1500,13 @@
         </div>
 
         <p>Inventory turns over constantly, so the smart first move is to check what's actually on the ground at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a> before you head over.</p>
+      
+        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
+          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
+            <img src="used-crosstrek-lot.webp" alt="Rear three-quarter view of a white used Subaru Crosstrek Premium on the Dalton Subaru National City used-car lot" loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 50%;">
+          </div>
+          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">A used Crosstrek Premium on the lot. It's the model we most often point budget-first buyers toward, because the smaller footprint keeps the price and the fuel bill down without giving up all-wheel drive.</figcaption>
+        </figure>
       </section>
 
       <!-- Inline CTA -->
@@ -1860,6 +1932,23 @@
       <span>Hours <strong>Mon-Sat 8:30-8 · Sun 10-6</strong></span>
       <span>Visit <a class="tel" href="https://maps.google.com/?q=2829+National+City+Blvd+National+City+CA+91950" rel="noopener"><strong>2829 National City Blvd</strong></a></span>
     </div>
+  </div>
+</section>
+
+<section class="disclosures">
+  <div class="wrap">
+    <h4>Disclosures</h4>
+    <ul>
+      <li><strong>Inventory &amp; availability.</strong> The used and Subaru Certified Pre-Owned vehicles described here (Outback, Forester, Crosstrek, Impreza, and Ascent) reflect what typically cycles through our lot and shift week to week as vehicles are sold and delivered. This page is not a guarantee that any specific model, trim, year, or color is currently on the lot. Confirm live availability at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com used inventory</a> before visiting.</li>
+      <li><strong>Pricing &amp; offers.</strong> We do not publish payment, APR, or financing figures on this page because those terms change. A specific vehicle's price is its window sticker plus the offer running that day. All financing is subject to credit approval. For independent value research, see <a href="https://www.kbb.com" rel="noopener">kbb.com</a> and <a href="https://www.edmunds.com" rel="noopener">edmunds.com</a>.</li>
+      <li><strong>Certified Pre-Owned program.</strong> The 152-point inspection and 7-year/100,000-mile limited powertrain warranty apply to Subaru Certified Pre-Owned vehicles only, per Subaru of America program terms, and eligibility is limited by model year and mileage. Powertrain coverage is measured from the vehicle's <strong>original in-service date</strong>, not your purchase date, so remaining coverage varies by vehicle. Standard used vehicles carry remaining factory coverage, if any, or are sold as-is. Confirm current terms at <a href="https://www.subaru.com" rel="noopener">subaru.com</a> and ask us to print the original in-service date on any CPO unit.</li>
+      <li><strong>Specifications &amp; fuel economy.</strong> Drivetrain and fuel-economy references are approximate and vary by model year, trim, engine, and configuration. Standard Symmetrical All-Wheel Drive is fitted to nearly all &mdash; not every &mdash; Subaru models; the BRZ is rear-wheel drive. Confirm exact figures on the specific vehicle's window sticker, at <a href="https://www.subaru.com" rel="noopener">subaru.com</a>, or at <a href="https://www.fueleconomy.gov" rel="noopener">fueleconomy.gov</a>.</li>
+      <li><strong>Safety &amp; recalls.</strong> Crash-test results are published per model year by the Insurance Institute for Highway Safety (<a href="https://www.iihs.org" rel="noopener">iihs.org</a>) and the National Highway Traffic Safety Administration (<a href="https://www.nhtsa.gov" rel="noopener">nhtsa.gov</a>) and vary year to year; check the specific year before you buy. Open recalls for any VIN can be checked free at nhtsa.gov.</li>
+      <li><strong>Dealership history.</strong> References to the store's prior operation as Frank Subaru at this location describe ownership history; Dalton Subaru National City is now part of the Dalton Corporation.</li>
+      <li><strong>Rating &amp; reviews.</strong> The 4.7-star Google rating across roughly 4,426 reviews reflects Dalton Subaru National City's Google Business Profile as of publication. Review counts are pulled live and change over time; confirm the current figure on the live Google profile.</li>
+      <li><strong>Hours.</strong> Sales hours (Monday&ndash;Saturday 8:30 AM&ndash;8:00 PM, Sunday 10:00 AM&ndash;6:00 PM) are current at publication and subject to change on holidays. Confirm hours before visiting.</li>
+      <li>Published 2026-08-01 by Dalton Subaru National City, 2829 National City Blvd, National City, CA 91950.</li>
+    </ul>
   </div>
 </section>
 
