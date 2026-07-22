@@ -43,13 +43,27 @@
   "@graph": [
     {
       "@type": "VideoObject",
+      "@id": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/#video-lot-secondhand",
+      "name": "Second-hand Subarus on the lot at Dalton Subaru National City",
+      "description": "Shot on our own lot on the Mile of Cars. What is standing here changes weekly, so call before you drive over if you are chasing a specific model.",
+      "contentUrl": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/dalton-lot-secondhand.mp4",
+      "thumbnailUrl": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/dalton-lot-secondhand-poster.jpg",
+      "uploadDate": "2026-08-01",
+      "publisher": {
+        "@id": "https://www.subarudalton.com/#dealer"
+      }
+    },
+    {
+      "@type": "VideoObject",
       "@id": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/#video-gm",
       "name": "Antonio Luna, General Manager — Dalton Subaru National City",
       "description": "Antonio Luna, general manager of Dalton Subaru National City, introducing the store from the Mile of Cars and talking through Subaru reliability.",
       "thumbnailUrl": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/gm-antonio-luna-poster.jpg",
       "uploadDate": "2026-08-01",
       "contentUrl": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/gm-antonio-luna.mp4",
-      "publisher": { "@id": "https://www.subarudalton.com/#dealer" }
+      "publisher": {
+        "@id": "https://www.subarudalton.com/#dealer"
+      }
     },
     {
       "@type": "Article",
@@ -82,12 +96,25 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Dalton Subaru National City", "item": "https://www.subarudalton.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Subaru For Sale Second Hand in National City", "item": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Dalton Subaru National City",
+          "item": "https://www.subarudalton.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Subaru For Sale Second Hand in National City",
+          "item": "https://www.subarudalton.com/subaru-for-sale-second-hand-national-city/"
+        }
       ]
     },
     {
-      "@type": ["AutoDealer", "LocalBusiness"],
+      "@type": [
+        "AutoDealer",
+        "LocalBusiness"
+      ],
       "@id": "https://www.subarudalton.com/#dealer",
       "name": "Dalton Subaru National City",
       "alternateName": "Frank Subaru",
@@ -95,7 +122,10 @@
       "image": "https://www.subarudalton.com/img/dalton-subaru-national-city-storefront.jpg",
       "logo": "https://www.subarudalton.com/img/dalton-subaru-national-city-logo.png",
       "priceRange": "$$",
-      "parentOrganization": { "@type": "Organization", "name": "Dalton Corporation" },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Dalton Corporation"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "2829 National City Blvd",
@@ -113,13 +143,22 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
           "opens": "08:30",
           "closes": "20:00"
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Sunday"],
+          "dayOfWeek": [
+            "Sunday"
+          ],
           "opens": "10:00",
           "closes": "18:00"
         }
@@ -135,12 +174,30 @@
         }
       ],
       "areaServed": [
-        { "@type": "City", "name": "National City" },
-        { "@type": "City", "name": "Chula Vista" },
-        { "@type": "City", "name": "San Diego" },
-        { "@type": "City", "name": "Bonita" },
-        { "@type": "City", "name": "El Cajon" },
-        { "@type": "City", "name": "Coronado" }
+        {
+          "@type": "City",
+          "name": "National City"
+        },
+        {
+          "@type": "City",
+          "name": "Chula Vista"
+        },
+        {
+          "@type": "City",
+          "name": "San Diego"
+        },
+        {
+          "@type": "City",
+          "name": "Bonita"
+        },
+        {
+          "@type": "City",
+          "name": "El Cajon"
+        },
+        {
+          "@type": "City",
+          "name": "Coronado"
+        }
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -150,7 +207,10 @@
       "award": [
         "Subaru Love Promise community commitment"
       ],
-      "brand": { "@type": "Brand", "name": "Subaru" }
+      "brand": {
+        "@type": "Brand",
+        "name": "Subaru"
+      }
     },
     {
       "@type": "FAQPage",
@@ -1317,6 +1377,47 @@
   }
   .disclosures ul { padding-left: 18px; margin: 0; }
   .disclosures strong { color: var(--ink-soft); }
+
+  /* ---------- July-template: visible breadcrumb ---------- */
+  .crumbs {
+    background: var(--paper, #ffffff);
+    padding: 18px 0 6px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--muted, rgba(0,0,0,.55));
+    text-transform: none;
+    border-bottom: none;
+    font-weight: 400;
+  }
+  .crumbs .wrap { display: block; }
+  .crumbs ol {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  }
+  .crumbs li { display: inline-flex; align-items: center; gap: 8px; }
+  .crumbs li:not(:first-child)::before {
+    content: "/"; color: var(--rule, rgba(0,0,0,.25));
+    font-weight: 500; text-transform: none;
+  }
+  .crumbs a {
+    color: var(--muted, rgba(0,0,0,.55)); text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center;
+  }
+  .crumbs a:hover, .crumbs a:focus {
+    color: var(--blue-deep, var(--blue, #2871d4));
+    border-bottom-color: var(--blue-deep, var(--blue, #2871d4));
+  }
+  .crumbs li[aria-current="page"] { color: var(--ink, rgba(0,0,0,.85)); font-weight: 600; }
+
+  /* First-party vertical lot clip, July's centred 9:16 treatment */
+  .lot-clip { margin: 32px 0 28px; display: flex; flex-direction: column; align-items: center; }
+  .lot-clip .frame { width: 100%; max-width: 340px; aspect-ratio: 9/16;
+    overflow: hidden; border-radius: 16px; background: #000; }
+  .lot-clip video { width: 100%; height: 100%; display: block; object-fit: cover; background: #000; }
+  .lot-clip figcaption { margin-top: 10px; font-size: 13px; line-height: 1.5;
+    color: var(--muted); text-align: center; max-width: 60ch; }
 </style>
 </head>
 <body>
@@ -1387,6 +1488,7 @@
       <section class="s" id="delivery-four">
         <div class="section-num"><span>01</span><span>From the pre-owned lot</span></div>
         <h2 class="section-h">Second-hand Subarus, <em>on one lot</em>.</h2>
+
         <p class="lede">A second-hand Subaru is simply a model that's had a prior owner, and at Dalton Subaru National City, that covers two clear ways to buy. Both park at the same address, so you compare them in front of you, not across the county.</p>
 
         <ul class="bullets">
@@ -1470,6 +1572,14 @@
         <div class="section-num"><span>04</span><span>The lineup, used</span></div>
         <h2 class="section-h">Which models show up <em>second-hand</em>.</h2>
         <p class="lede">Subaru's lineup holds its value and its all-wheel-drive reputation, which is exactly why these models move through the second-hand lot. Standard symmetrical all-wheel drive comes on nearly every Subaru, part of why these cars resell well in a region where buyers want traction for desert runs to Anza-Borrego and mountain trips up to Julian.</p>
+        <figure class="lot-clip" id="video-lot-secondhand">
+          <div class="frame">
+            <video src="dalton-lot-secondhand.mp4" poster="dalton-lot-secondhand-poster.jpg" controls playsinline
+                   preload="none" aria-label="Second-hand Subarus on the lot at Dalton Subaru National City"></video>
+          </div>
+          <figcaption>Shot on our own lot on the Mile of Cars. What is standing here changes weekly, so call before you drive over if you are chasing a specific model.</figcaption>
+        </figure>
+
 
         <div class="trims">
           <article class="trim flagship">
