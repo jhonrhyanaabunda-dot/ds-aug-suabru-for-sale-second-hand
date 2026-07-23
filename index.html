@@ -1406,6 +1406,18 @@
   .lot-clip video { width: 100%; height: 100%; display: block; object-fit: cover; background: #000; }
   .lot-clip figcaption { margin-top: 10px; font-size: 13px; line-height: 1.5;
     color: var(--muted); text-align: center; max-width: 60ch; }
+
+  /* ---------- July-template: used-inventory carousel ---------- */
+  .car-carousel { position: relative; margin: 8px 0 4px; }
+  .cc-track { display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; border-radius: 14px; border: 1px solid var(--rule); background: #000; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .cc-track::-webkit-scrollbar { display: none; }
+  .cc-track:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  .cc-slide { margin: 0; flex: 0 0 100%; scroll-snap-align: center; }
+  .cc-slide img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+  .cc-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(19,25,32,0.78); color: #fff; font-size: 22px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s ease; }
+  .cc-btn:hover { background: rgba(19,25,32,0.95); }
+  .cc-prev { left: 12px; }
+  .cc-next { right: 12px; }
 </style>
 </head>
 <body>
@@ -1594,6 +1606,13 @@
           </div>
           <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">A used Crosstrek Premium on the lot. It's the model we most often point budget-first buyers toward, because the smaller footprint keeps the price and the fuel bill down without giving up all-wheel drive.</figcaption>
         </figure>
+      
+        <div class="car-carousel" aria-roledescription="carousel" aria-label="Used Subaru Forester photos">
+          <div class="cc-track" tabindex="0"><figure class="cc-slide"><img src="used-forester-01.webp" alt="Front of a red used Subaru Forester on the Dalton Subaru National City used-car lot" loading="lazy" decoding="async"></figure><figure class="cc-slide"><img src="used-forester-03.webp" alt="Rear three-quarter view of the red used Subaru Forester in front of the Dalton Subaru building" loading="lazy" decoding="async"></figure><figure class="cc-slide"><img src="used-forester-04.webp" alt="Rear of the red used Subaru Forester showing the Forester and AWD badges, at Dalton Subaru National City" loading="lazy" decoding="async"></figure></div>
+          <button class="cc-btn cc-prev" type="button" aria-label="Previous photo">&#8249;</button>
+          <button class="cc-btn cc-next" type="button" aria-label="Next photo">&#8250;</button>
+        </div>
+        <p style="margin-top:12px;font-size:13px;line-height:1.5;color:var(--muted);max-width:70ch;">Photos of an actual used Forester on our lot at 2829 National City Blvd. Specific cars sell and stock changes weekly, so check the <a href="https://www.subarudalton.com/searchused-national-city-ca.aspx" target="_blank" rel="noopener">live used inventory</a>.</p>
       </section>
 
       <!-- Inline CTA -->
@@ -1742,6 +1761,13 @@
         </blockquote>
 
         <p>The honest version: on a newer car with most of its original warranty intact, CPO adds real value. On an older eligible car where much of that 7-year powertrain window has already elapsed, a well-maintained standard used unit at a lower price can come out ahead.</p>
+      
+        <div class="car-carousel" aria-roledescription="carousel" aria-label="Used Subaru Crosstrek photos">
+          <div class="cc-track" tabindex="0"><figure class="cc-slide"><img src="used-crosstrek-01.webp" alt="Front of a white used Subaru Crosstrek on the Dalton Subaru National City used-car lot" loading="lazy" decoding="async"></figure><figure class="cc-slide"><img src="used-crosstrek-02.jpg" alt="Side profile of the white used Subaru Crosstrek showing alloy wheels and roof rails, at Dalton Subaru National City" loading="lazy" decoding="async"></figure><figure class="cc-slide"><img src="used-crosstrek-04.webp" alt="Rear of the white used Subaru Crosstrek showing the Crosstrek and AWD badges, at Dalton Subaru National City" loading="lazy" decoding="async"></figure></div>
+          <button class="cc-btn cc-prev" type="button" aria-label="Previous photo">&#8249;</button>
+          <button class="cc-btn cc-next" type="button" aria-label="Next photo">&#8250;</button>
+        </div>
+        <p style="margin-top:12px;font-size:13px;line-height:1.5;color:var(--muted);max-width:70ch;">A used Crosstrek from the same rows. Whether a given car is standard used or Certified Pre-Owned is on its window sticker, and it is listed on the <a href="https://www.subarudalton.com/searchused-national-city-ca.aspx" target="_blank" rel="noopener">live used inventory</a>.</p>
       </section>
 
       <!-- §07 How to Buy a Second-Hand Subaru -->
@@ -2066,5 +2092,16 @@
   })();
 </script>
 
+<script>
+  document.querySelectorAll('.car-carousel').forEach(function (cc) {
+    var track = cc.querySelector('.cc-track');
+    var prev = cc.querySelector('.cc-prev');
+    var next = cc.querySelector('.cc-next');
+    if (!track || !prev || !next) return;
+    var step = function () { return track.clientWidth; };
+    prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+  });
+</script>
 </body>
 </html>
