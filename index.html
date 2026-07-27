@@ -959,8 +959,8 @@
     font-weight: 700;
   }
 
-  /* ---------- Why Findlay band ---------- */
-  .findlay-band {
+  /* ---------- Why-us band ---------- */
+  .why-band {
     background: var(--ink);
     color: var(--white);
     margin: 56px 0 0;
@@ -969,22 +969,22 @@
     position: relative;
     overflow: hidden;
   }
-  .findlay-band::before {
+  .why-band::before {
     content: "";
     position: absolute; right: -10%; top: -30%;
     width: 60%; aspect-ratio: 1;
     background: radial-gradient(circle at center, rgba(25,113,212,.4), rgba(25,113,212,0) 60%);
     pointer-events: none;
   }
-  .findlay-band .wrap { position: relative; }
-  .findlay-band .eyebrow { color: #6db3ff; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; font-weight: 600; }
-  .findlay-band h2 {
+  .why-band .wrap { position: relative; }
+  .why-band .eyebrow { color: #6db3ff; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; font-weight: 600; }
+  .why-band h2 {
     font-family: var(--display); font-weight: 700;
     font-size: clamp(34px, 4.4vw, 54px); line-height: 1.05; letter-spacing: -0.025em;
     margin: 0 0 20px; max-width: 720px; text-wrap: balance;
   }
-  .findlay-band h2 em { font-style: normal; color: #9cc8ff; font-weight: 700; }
-  .findlay-band .band-deck {
+  .why-band h2 em { font-style: normal; color: #9cc8ff; font-weight: 700; }
+  .why-band .band-deck {
     font-family: var(--display);
     font-weight: 400;
     font-size: 19px;
@@ -1011,16 +1011,16 @@
   .trust-grid .item .num small { font-size: 22px; color: #9cc8ff; }
   .trust-grid .item .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-top: 16px; line-height: 1.55; }
 
-  .findlay-extras {
+  .why-extras {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 48px;
     margin-top: 56px;
   }
-  .findlay-extras h5 { font-family: var(--display); font-size: 20px; font-weight: 500; margin: 0 0 20px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.12); }
-  .findlay-extras p { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.7; margin: 0 0 16px; }
-  .findlay-extras p:last-child { margin-bottom: 0; }
-  .findlay-extras strong { color: var(--white); font-weight: 600; }
+  .why-extras h5 { font-family: var(--display); font-size: 20px; font-weight: 500; margin: 0 0 20px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .why-extras p { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.7; margin: 0 0 16px; }
+  .why-extras p:last-child { margin-bottom: 0; }
+  .why-extras strong { color: var(--white); font-weight: 600; }
 
   /* ---------- FAQ accordion ---------- */
   .faq { margin: 28px 0; }
@@ -1198,7 +1198,7 @@
     .trust-grid .item:nth-child(2) { padding-left: 24px !important; border-right: none; }
     .trust-grid .item:nth-child(3) { padding-left: 0 !important; border-bottom: none; }
     .trust-grid .item:nth-child(4) { padding-left: 24px !important; border-right: none; border-bottom: none; }
-    .findlay-extras { gap: 36px; }
+    .why-extras { gap: 36px; }
     .cross-table { overflow-x: auto; }
     .cross-table table { min-width: 720px; }
   }
@@ -1216,10 +1216,10 @@
     .trims { grid-template-columns: 1fr; border: none; }
     .trim { border-right: none !important; border-bottom: 1px solid var(--rule) !important; padding: 28px 0; }
     .trim:last-child { border-bottom: none !important; }
-    .findlay-extras { grid-template-columns: 1fr; gap: 36px; }
-    .findlay-band { padding: 48px 0 40px; }
-    .findlay-band h2 { font-size: 32px; }
-    .findlay-band .band-deck { font-size: 17px; }
+    .why-extras { grid-template-columns: 1fr; gap: 36px; }
+    .why-band { padding: 48px 0 40px; }
+    .why-band h2 { font-size: 32px; }
+    .why-band .band-deck { font-size: 17px; }
     .trust-grid { grid-template-columns: 1fr 1fr; padding-top: 36px; margin-top: 44px; }
     .trust-grid .item { padding: 20px 16px 20px 0 !important; }
     .trust-grid .item:nth-child(2) { padding-left: 16px !important; }
@@ -1251,8 +1251,8 @@
   /* ---------- Tel links ---------- */
   a.tel { color: inherit; text-decoration: none; }
   a.tel:hover { color: var(--blue); }
-  .findlay-band a.tel { color: inherit; }
-  .findlay-band a.tel:hover { color: #9cc8ff; }
+  .why-band a.tel { color: inherit; }
+  .why-band a.tel:hover { color: #9cc8ff; }
 
   /* ---------- Accessibility ---------- */
   .visually-hidden {
@@ -1288,7 +1288,7 @@
       width: 100% !important;
     }
     /* Specific known-problematic components - force them to behave */
-    .findlay-band, .closing-cta, .findlay-band .wrap, .closing-cta .wrap {
+    .why-band, .closing-cta, .why-band .wrap, .closing-cta .wrap {
       max-width: 100% !important;
     }
     /* Trim cards must be single-column on mobile and respect parent width */
@@ -1472,13 +1472,13 @@
     <nav class="toc" aria-label="Table of contents">
       <h4>In this guide</h4>
       <ol>
-        <li><a href="#delivery-four">Second-hand, on one lot</a></li>
-        <li><a href="#whats-new">What CPO actually means</a></li>
-        <li><a href="#charging-levels">Why shop second-hand here</a></li>
-        <li><a href="#mojave-summers">Which models show up</a></li>
-        <li><a href="#range-heat">Mileage, salt &amp; inspection</a></li>
-        <li><a href="#public-charging">Used vs. CPO: which lane</a></li>
-        <li><a href="#shop-findlay">How to buy second-hand</a></li>
+        <li><a href="#overview">Second-hand, on one lot</a></li>
+        <li><a href="#cpo-explained">What CPO means</a></li>
+        <li><a href="#why-here">Why shop second-hand here</a></li>
+        <li><a href="#models">Which models show up</a></li>
+        <li><a href="#inspection">Mileage, salt &amp; inspection</a></li>
+        <li><a href="#used-vs-cpo">Used vs. CPO: which lane</a></li>
+        <li><a href="#how-to-buy">How to buy second-hand</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#sources">References</a></li>
       </ol>
@@ -1488,11 +1488,11 @@
     <div class="body">
 
       <!-- §01 Second-Hand Subarus, On One Lot -->
-      <section class="s" id="delivery-four">
+      <section class="s" id="overview">
         <div class="section-num"><span>01</span><span>From the pre-owned lot</span></div>
         <h2 class="section-h">Second-hand Subarus, <em>on one lot</em>.</h2>
 
-        <p class="lede">A second-hand Subaru is simply a model that's had a prior owner, and at Dalton Subaru National City, that covers two clear ways to buy. Both park at the same address, so you compare them in front of you, not across the county.</p>
+        <p class="lede">A second-hand Subaru is a model that's had a prior owner, and at Dalton Subaru National City, that covers two clear ways to buy. Both park at the same address, so you compare them in front of you, not across the county.</p>
 
         <ul class="bullets">
           <li><strong>Used Subaru</strong>: Any pre-owned Subaru on the ground. This is your lowest entry point into the lineup, with the widest spread of model years and mileage.</li>
@@ -1519,9 +1519,9 @@
       </section>
 
       <!-- §02 What "Certified Pre-Owned" Actually Means -->
-      <section class="s" id="whats-new">
+      <section class="s" id="cpo-explained">
         <div class="section-num"><span>02</span><span>The CPO program</span></div>
-        <h2 class="section-h">What "Certified Pre-Owned" <em>actually means</em> on a Subaru.</h2>
+        <h2 class="section-h">What "Certified Pre-Owned" <em>means</em> on a Subaru.</h2>
         <p class="lede">CPO gets thrown around loosely in used-car ads, so here's the specific version that applies to the cars on our lot. Subaru of America's program covers vehicles within manufacturer-set model-year and mileage limits, and each one has to pass Subaru's 152-point inspection before it can wear the CPO badge.</p>
 
         <p>The headline benefit is the warranty: Subaru CPO adds a 7-year/100,000-mile powertrain warranty measured from the vehicle's original in-service date, on top of any remaining factory bumper-to-bumper coverage. You can confirm the current program terms directly on Subaru of America's own site, <a href="https://www.subaru.com" rel="noopener">subaru.com</a>. We'd rather you check the manufacturer's published terms than take our word for it.</p>
@@ -1533,7 +1533,7 @@
           <div class="item"><div class="num">SOA</div><div class="lbl">Backed by Subaru of America · subaru.com</div></div>
         </div>
 
-        <h3>Where the warranty clock actually starts</h3>
+        <h3>Where the warranty clock starts</h3>
         <p>Here's the part most second-hand shoppers miss: that powertrain clock starts at the <strong>original</strong> in-service date, not the date you buy. So a CPO Outback that was first sold three years ago has already used three years of that 7-year window. It's still real coverage, but if you're buying a CPO car near the older edge of the eligibility range, do the subtraction before you assume you're getting the full seven years. Our finance desk will print the original in-service date for any CPO unit so you can see exactly where the clock stands.</p>
 
         <h3>What sends a car to the used line instead</h3>
@@ -1541,7 +1541,7 @@
       </section>
 
       <!-- §03 Why Shop Second-Hand Subarus Here -->
-      <section class="s" id="charging-levels">
+      <section class="s" id="why-here">
         <div class="section-num"><span>03</span><span>Why buy here</span></div>
         <h2 class="section-h">Why shop second-hand <em>Subarus here</em>.</h2>
         <p class="lede">San Diego County has no shortage of pre-owned Subaru listings. Here's what makes the Dalton Subaru lot worth the drive to National City.</p>
@@ -1560,7 +1560,7 @@
       </section>
 
       <!-- §04 Which Models Show Up Second-Hand -->
-      <section class="s" id="mojave-summers">
+      <section class="s" id="models">
         <div class="section-num"><span>04</span><span>The lineup, used</span></div>
         <h2 class="section-h">Which models show up <em>second-hand</em>.</h2>
         <p class="lede">Subaru's lineup holds its value and its all-wheel-drive reputation, which is exactly why these models move through the second-hand lot. Standard symmetrical all-wheel drive comes on nearly every Subaru, part of why these cars resell well in a region where buyers want traction for desert runs to Anza-Borrego and mountain trips up to Julian.</p>
@@ -1601,7 +1601,7 @@
           </article>
         </div>
 
-        <p>Inventory turns over constantly, so the smart first move is to check what's actually on the ground at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a> before you head over.</p>
+        <p>Inventory turns over constantly, so the smart first move is to check what's on the ground at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a> before you head over.</p>
       
         <figure class="section-image" style="margin:32px 0 28px;position:relative;">
           <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
@@ -1637,9 +1637,9 @@
       </aside>
 
       <!-- §05 A Word on Mileage, Salt, and What We Actually Look For -->
-      <section class="s" id="range-heat">
+      <section class="s" id="inspection">
         <div class="section-num"><span>05</span><span>In the service drive</span></div>
-        <h2 class="section-h">Mileage, salt, and <em>what we actually look for</em>.</h2>
+        <h2 class="section-h">Mileage, salt, and <em>what we look for</em>.</h2>
         <p class="lede">San Diego is a coastal market, which changes what matters on a used inspection. We're not fighting Midwest road salt and rusted-out subframes here. The bigger second-hand concerns in Southern California are different, and they're the systems our techs pull apart first on any trade-in.</p>
 
         <div class="trims">
@@ -1673,7 +1673,7 @@
       </section>
 
       <!-- §06 Used vs. Certified Pre-Owned: Which Lane Is Right for You -->
-      <section class="s" id="public-charging">
+      <section class="s" id="used-vs-cpo">
         <div class="section-num"><span>06</span><span>Used vs. CPO</span></div>
         <h2 class="section-h">Used vs. Certified Pre-Owned: <em>which lane is right for you</em>.</h2>
         <p class="lede">There's no universally correct answer. It depends on how you plan to keep the car. Here's the side-by-side we walk buyers through on the floor.</p>
@@ -1775,7 +1775,7 @@
       </section>
 
       <!-- §07 How to Buy a Second-Hand Subaru -->
-      <section class="s" id="shop-findlay">
+      <section class="s" id="how-to-buy">
         <div class="section-num"><span>07</span><span>Buying at Dalton</span></div>
         <h2 class="section-h">How to buy a second-hand Subaru, <em>step by step</em>.</h2>
         <p class="lede">We are at <strong>2829 National City Blvd, National City, CA 91950</strong>, on the National City Mile of Cars, serving National City, Chula Vista, and San Diego County. Buying here is meant to be short and clear. Here's what it looks like end to end.</p>
@@ -1835,10 +1835,10 @@
 </main>
 
 <!-- Why us full-bleed band -->
-<section class="findlay-band">
+<section class="why-band">
   <div class="wrap">
     <div class="eyebrow">Dalton Subaru National City</div>
-    <h2>Deep roots on the <em>Mile of Cars</em>.</h2>
+    <h2>Who you're buying the used car <em>from</em>.</h2>
     <p class="band-deck">The same store local owners knew as Frank Subaru, now operating as Dalton Subaru National City under the Dalton Corporation: same people, same service drive, same team. We serve National City, Chula Vista, and the wider San Diego County area.</p>
 
     <div class="trust-grid">
@@ -1860,7 +1860,7 @@
       </div>
     </div>
 
-    <div class="findlay-extras">
+    <div class="why-extras">
       <div>
         <h5>Service drive</h5>
         <p>Our Service and Parts team, led by Rick Griffin, puts every trade-in on the rack and inspects the underbody, brakes, tires, and the boxer engine's gaskets and timing components before deciding whether it heads for the CPO line or the standard used line.</p>
