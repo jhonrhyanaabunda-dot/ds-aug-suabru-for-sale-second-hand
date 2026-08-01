@@ -368,7 +368,7 @@
   .kicker-bar .meta-right strong { color: var(--ink); font-weight: 600; letter-spacing: 0.16em; }
 
   /* ---------- HERO ---------- */
-  .hero { padding: 56px 0 0; border-bottom: 1px solid var(--rule); }
+  .hero { padding: 56px 0 0; }
   .hero .eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
@@ -661,6 +661,8 @@
     border-bottom: 1px solid var(--rule);
   }
   .trim:nth-child(2n) { border-right: none; }
+  /* Odd card count: let the final card span the full row so no empty cell is left */
+  .trim:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: none; }
   .trim:nth-last-child(-n+2) { border-bottom: none; }
   .trim .engine-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; white-space: nowrap; }
   .trim .engine { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); font-weight: 700; }
@@ -1091,9 +1093,7 @@
     margin-bottom: 18px;
     display: flex; align-items: center; gap: 10px;
   }
-  .cta-inline .eyebrow::before {
-    content: ""; width: 28px; height: 1px; background: #9cc8ff;
-  }
+  .cta-inline .eyebrow::before { content: none; }
   .cta-inline h3 {
     font-family: var(--display); font-size: clamp(32px, 3.4vw, 44px);
     font-weight: 700; margin: 0 0 14px; color: var(--white);
@@ -1342,6 +1342,58 @@
     .btn:hover .arrow { transform: none; }
   }
 
+
+  /* ---------- Lot gallery carousel (real Dalton Subaru units) ---------- */
+  .lot-gallery { margin:40px 0 8px }
+  .lot-gallery .lg-head { display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 16px;flex-wrap:wrap }
+  .lot-gallery .lg-kicker { font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:700;display:flex;align-items:center;gap:9px;margin:0 0 6px }
+  .lot-gallery .lg-kicker .dot { width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(25,113,212,.14) }
+  .lot-gallery .lg-title { font-family:var(--display);font-size:20px;font-weight:600;line-height:1.25;letter-spacing:-.01em;color:var(--ink);margin:0 }
+  .lot-gallery .lg-title span { color:var(--muted);font-weight:400 }
+  .lot-gallery .lg-inv { flex:none;display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--blue-deep);text-decoration:none;white-space:nowrap;padding-bottom:2px }
+  .lot-gallery .lg-inv .arrow { transition:transform .2s ease }
+  .lot-gallery .lg-inv:hover { color:var(--blue) }
+  .lot-gallery .lg-inv:hover .arrow { transform:translateX(3px) }
+  .lg-stage { position:relative;border-radius:var(--radius-md);overflow:hidden;background:#0e1216;aspect-ratio:3/2;box-shadow:0 24px 50px -28px rgba(14,18,22,.55),inset 0 0 0 1px rgba(0,0,0,.05) }
+  .lg-track { display:flex;height:100%;transition:transform .55s cubic-bezier(.22,.61,.36,1);will-change:transform }
+  .lg-slide { position:relative;flex:0 0 100%;height:100% }
+  .lg-slide img { width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block }
+  .lg-slide::after { content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 46%,rgba(0,0,0,.16) 72%,rgba(0,0,0,.62) 100%);pointer-events:none }
+  .lg-cap { position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 24px;color:#fff;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;pointer-events:none }
+  .lg-cap .cap-txt { max-width:74% }
+  .lg-cap .cap-ey { font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9cc8ff;font-weight:700;margin:0 0 5px }
+  .lg-cap .cap-main { font-family:var(--display);font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.005em;margin:0;text-wrap:balance }
+  .lg-count { position:absolute;right:16px;top:16px;z-index:3;font-family:var(--display);font-variant-numeric:tabular-nums;font-size:12.5px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.92);background:rgba(0,0,0,.42);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:999px }
+  .lg-arrow { position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.24);background:rgba(0,0,0,.42);backdrop-filter:blur(6px);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .18s ease }
+  .lg-arrow:hover { background:rgba(0,0,0,.68) }
+  .lg-arrow svg { width:20px;height:20px }
+  .lg-arrow.prev { left:14px } .lg-arrow.next { right:14px }
+  .lg-thumbs { display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin }
+  .lg-thumb { flex:0 0 96px;height:64px;padding:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:none;cursor:pointer;opacity:.55;transition:opacity .18s ease,border-color .18s ease }
+  .lg-thumb img { width:100%;height:100%;object-fit:cover;display:block }
+  .lg-thumb.active,.lg-thumb:hover { opacity:1;border-color:var(--blue) }
+  .lg-dots { display:none }
+  .lg-note { font-size:12.5px;color:var(--muted);line-height:1.55;margin:12px 0 0;max-width:70ch }
+  @media (max-width:700px){ .lg-cap { padding:16px 16px } .lg-cap .cap-main { font-size:15px } .lg-thumb { flex:0 0 78px;height:54px } }
+
+  /* ---------- July-template: intro box ---------- */
+  p.tldr { font-family: var(--display); font-size: 17px; font-weight: 600; line-height: 1.5; color: var(--blue-deep); background: var(--blue-soft); border-left: 3px solid var(--blue); padding: 14px 18px; margin: 0 0 28px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+  p.tldr::before { content: ""; display: none; }
+
+  /* ---------- July-template: sidebar rail (matches July Crosstrek) ---------- */
+  .rail-action { display:block;text-decoration:none;color:#fff;background:var(--blue);border-radius:var(--radius-md,14px);padding:20px;margin-bottom:16px;transition:background .15s ease }
+  .rail-action:hover { background:var(--blue-deep) }
+  .rail-action .lbl { font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8);display:block;margin-bottom:8px }
+  .rail-action strong { font-family:var(--display);font-size:21px;font-weight:600;line-height:1.2;color:#fff;display:block }
+  .rail-action .sub { font-size:13px;line-height:1.5;color:rgba(255,255,255,.85);display:block;margin-top:8px }
+  .rail-action .rail-action__cta { display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff }
+  .rail-card { border:1px solid var(--rule);border-radius:var(--radius-md,14px);background:var(--white,#fff);padding:18px;margin-bottom:16px }
+  .rail-card .lbl { font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px }
+  .rail-card strong { font-family:var(--display);font-size:18px;font-weight:600;line-height:1.2;color:var(--ink);display:block }
+  .rail-card .sub { font-size:13px;line-height:1.5;color:var(--muted);display:block;margin-top:4px }
+  .rail-card .rail-link { display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease }
+  .rail-card .rail-link:hover { border-bottom-color:var(--blue) }
+
   /* ---------- July-template: hero CTA buttons ---------- */
   .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 0 0 32px; }
   .hero-cta a { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 600; font-size: 16px; text-decoration: none; border-radius: 999px; padding: 14px 28px; transition: background .2s ease, color .2s ease, border-color .2s ease; }
@@ -1443,18 +1495,18 @@
 
     <div class="hero-cta">
       <a class="primary" href="https://www.subarudalton.com/searchused.aspx">Browse second-hand inventory <span class="arrow">&rarr;</span></a>
-      <a class="secondary" href="tel:+16198600064">Call 619-860-0064</a>
     </div>
   </div>
 
   <figure class="hero-photo full-bleed" role="img" aria-label="Pre-owned Subaru lineup at Dalton Subaru National City">
     <img class="scene"
-         src="forester-black-lot.webp"
-         alt="A black Subaru Forester on the sales lot at Dalton Subaru National City, where used and Certified Pre-Owned models sit in the same rows on the Mile of Cars"
+         src="green.jpg"
+         alt="A Subaru Forester Wilderness in green parked on a tree-lined road, the kind of second-hand Subaru that comes through the lot at Dalton Subaru National City"
          loading="eager"
          fetchpriority="high"
-         width="2000"
-         height="1125" />
+         width="1200"
+         height="675"
+         style="object-position: center;" />
     <span class="credit">DALTON SUBARU NATIONAL CITY · PRE-OWNED</span>
     <figcaption class="visually-hidden">Used and Subaru Certified Pre-Owned vehicles at Dalton Subaru National City on the National City Mile of Cars, serving San Diego County.</figcaption>
   </figure>
@@ -1499,7 +1551,7 @@
         <div class="section-num"><span>01</span><span>From the pre-owned lot</span></div>
         <h2 class="section-h">Second-hand Subarus, <em>on one lot</em>.</h2>
 
-        <p class="lede no-cap">A second-hand Subaru is a model that's had a prior owner. At Dalton Subaru National City, second hand splits into two categories, and you can compare both at our pre-owned lot.</p>
+        <p class="tldr">A second-hand Subaru is a model that's had a prior owner. At Dalton Subaru National City, second hand splits into two categories, and you can compare both at our pre-owned lot.</p>
 
         <ul class="bullets">
           <li><strong>Used Subaru</strong>: Any pre-owned Subaru. This is your lowest entry point into the lineup, with the widest spread of model years and mileage.</li>
@@ -1513,12 +1565,23 @@
 
         <p style="font-size:12px; color:var(--muted); letter-spacing:0.02em; line-height:1.6; border-top:1px solid var(--rule-soft); padding-top:18px; margin-top:24px;"><strong style="color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-size:10px;">Note ·</strong> Used and CPO inventory turns over constantly. The fastest way to confirm what's physically on our lot today is to check the <a href="https://www.subarudalton.com/searchused.aspx">current second-hand inventory</a> at subarudalton.com or reach the team through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>. <em>Reviewed and posted by the Dalton Subaru National City Pre-Owned Team.</em></p>
       
-        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
-          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
-            <img src="used-forester-lot.webp" alt="Side profile of a red used Subaru Forester Limited on the Dalton Subaru National City used-car lot, showing alloy wheels and roof rails" loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 50%;">
+        <div class="lot-gallery" data-carousel aria-roledescription="carousel" aria-label="Used Subaru Foresters at Dalton Subaru National City" tabindex="0">
+          <div class="lg-head">
+            <div>
+              <p class="lg-kicker"><span class="dot"></span> On our lot now</p>
+              <h2 class="lg-title">A used Subaru at Dalton Subaru, <span>photographed on the National City Mile of Cars</span></h2>
+            </div>
+            <a class="lg-inv" href="https://www.subarudalton.com/searchused.aspx">See current inventory <span class="arrow">&rarr;</span></a>
           </div>
-          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">A used Forester Limited in our rows at 2829 National City Blvd. Standard and Certified Pre-Owned units park together here, which is what makes the back-to-back drive possible.</figcaption>
-        </figure>
+          <div class="lg-stage">
+            <button class="lg-arrow prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <div class="lg-track" data-track><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="1 of 7"><img src="used-forester-lot.webp" alt="Side profile of a red used Subaru Forester Limited on the Dalton Subaru National City lot" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Full profile</p><p class="cap-main">A used Forester Limited in our rows at 2829 National City Blvd.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="2 of 7"><img src="used-forester-03.webp" alt="A used Subaru Forester on the pre-owned lot at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">On the row</p><p class="cap-main">Standard and Certified Pre-Owned units park together here.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="3 of 7"><img src="used-forester-04.webp" alt="Another angle of a used Subaru Forester at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Another angle</p><p class="cap-main">Walk the row and compare trims back to back.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="4 of 7"><img src="used-forester-05.webp" alt="A used Subaru Forester photographed at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Detail</p><p class="cap-main">Window stickers stay on the glass. Nothing hidden.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="5 of 7"><img src="used-lot-forester.webp" alt="A used Subaru Forester parked in the pre-owned rows at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">The rows</p><p class="cap-main">Used and CPO Foresters share the same lot.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="6 of 7"><img src="body-forester-street.jpg" alt="A Subaru Forester on the street near National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Out of the lot</p><p class="cap-main">What it looks like once it is yours.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="7 of 7"><img src="forester-black-lot.webp" alt="A black Subaru Forester on the sales lot at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Black on black</p><p class="cap-main">Colour and trim vary by unit, week to week.</p></div></div></div></div>
+            <button class="lg-arrow next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+            <div class="lg-count" data-count aria-live="polite">01 / 07</div>
+          </div>
+          <div class="lg-thumbs" role="tablist" aria-label="Choose a photo" data-thumbs><button class="lg-thumb active" type="button" role="tab" aria-label="Full profile"><img src="used-forester-lot.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="On the row"><img src="used-forester-03.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Another angle"><img src="used-forester-04.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Detail"><img src="used-forester-05.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="The rows"><img src="used-lot-forester.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Out of the lot"><img src="body-forester-street.jpg" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Black on black"><img src="forester-black-lot.webp" alt="" loading="lazy"></button></div>
+          <p class="lg-note"><strong>Actual photos of used Subarus at Dalton Subaru National City</strong>, 2829 National City Blvd. Specific trim, colour, and equipment vary by unit &mdash; see the live used inventory for what is on the lot today.</p>
+        </div>
       </section>
 
       <!-- §02 What "Certified Pre-Owned" Actually Means -->
@@ -1626,12 +1689,23 @@
 
         <p>Inventory turns over constantly, so the smart first move is to check what's on the ground at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a> before you head over.</p>
       
-        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
-          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
-            <img src="used-crosstrek-lot.webp" alt="Rear three-quarter view of a white used Subaru Crosstrek Premium on the Dalton Subaru National City used-car lot" loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 50%;">
+        <div class="lot-gallery" data-carousel aria-roledescription="carousel" aria-label="Used Subaru Crosstreks at Dalton Subaru National City" tabindex="0">
+          <div class="lg-head">
+            <div>
+              <p class="lg-kicker"><span class="dot"></span> On our lot now</p>
+              <h2 class="lg-title">A used Crosstrek at Dalton Subaru, <span>photographed on the National City Mile of Cars</span></h2>
+            </div>
+            <a class="lg-inv" href="https://www.subarudalton.com/searchused.aspx">See current inventory <span class="arrow">&rarr;</span></a>
           </div>
-          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">A used Crosstrek Premium on the lot. It's the model we most often point budget-first buyers toward, because the smaller footprint keeps the price and the fuel bill down without giving up all-wheel drive.</figcaption>
-        </figure>
+          <div class="lg-stage">
+            <button class="lg-arrow prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <div class="lg-track" data-track><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="1 of 7"><img src="used-crosstrek-lot.webp" alt="Rear three-quarter view of a white used Subaru Crosstrek Premium at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">From the rear</p><p class="cap-main">A used Crosstrek Premium from the same rows.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="2 of 7"><img src="used-crosstrek-01.webp" alt="Front three-quarter view of a used Subaru Crosstrek at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">The face of it</p><p class="cap-main">Standard symmetrical all-wheel drive on every one.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="3 of 7"><img src="used-crosstrek-02.jpg" alt="Side profile of a used Subaru Crosstrek at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Full profile</p><p class="cap-main">The smaller footprint that keeps the price down.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="4 of 7"><img src="used-crosstrek-03.webp" alt="Another view of a used Subaru Crosstrek at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">On the lot</p><p class="cap-main">Whether a car is used or CPO is on its window sticker.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="5 of 7"><img src="used-crosstrek-04.webp" alt="A used Subaru Crosstrek photographed at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Detail</p><p class="cap-main">Wheels, glass, and trim, checked before it lists.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="6 of 7"><img src="used-crosstrek-grey.jpg" alt="A grey used Subaru Crosstrek at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Colour choice</p><p class="cap-main">Colour and equipment vary by unit.</p></div></div></div><div class="lg-slide" role="group" aria-roledescription="slide" aria-label="7 of 7"><img src="crosstrek-wilderness-lot.webp" alt="A Subaru Crosstrek Wilderness on the lot at Dalton Subaru National City" loading="lazy" decoding="async"><div class="lg-cap"><div class="cap-txt"><p class="cap-ey">Wilderness trim</p><p class="cap-main">Wilderness units turn up second-hand too.</p></div></div></div></div>
+            <button class="lg-arrow next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+            <div class="lg-count" data-count aria-live="polite">01 / 07</div>
+          </div>
+          <div class="lg-thumbs" role="tablist" aria-label="Choose a photo" data-thumbs><button class="lg-thumb active" type="button" role="tab" aria-label="From the rear"><img src="used-crosstrek-lot.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="The face of it"><img src="used-crosstrek-01.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Full profile"><img src="used-crosstrek-02.jpg" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="On the lot"><img src="used-crosstrek-03.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Detail"><img src="used-crosstrek-04.webp" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Colour choice"><img src="used-crosstrek-grey.jpg" alt="" loading="lazy"></button><button class="lg-thumb" type="button" role="tab" aria-label="Wilderness trim"><img src="crosstrek-wilderness-lot.webp" alt="" loading="lazy"></button></div>
+          <p class="lg-note"><strong>Actual photos of used Subarus at Dalton Subaru National City</strong>, 2829 National City Blvd. Whether a given car is standard used or Certified Pre-Owned is on its window sticker and on the live used inventory listing.</p>
+        </div>
       </section>
 
       <!-- Inline CTA -->
@@ -1801,26 +1875,22 @@
 
     <!-- Right gutter -->
     <aside class="gutter" aria-label="Trust signals">
-      <div class="chip">
-        <div class="lbl">Google rating</div>
-        <div class="stars">★★★★★</div>
-        <strong style="font-size:28px;">4.7</strong>
-        <div class="sub">Across 4,448 customer reviews</div>
+      <a class="rail-action" href="https://www.subarudalton.com/searchused.aspx">
+        <span class="lbl">Browse inventory</span>
+        <strong>Shop second-hand Subarus</strong>
+        <span class="sub">Used and Certified Pre-Owned, all on one lot.</span>
+        <span class="rail-action__cta">View inventory &rarr;</span>
+      </a>
+      <div class="rail-card">
+        <span class="lbl">Visit us</span>
+        <strong>2829 National City Blvd</strong>
+        <span class="sub">National City, CA 91950. On the Mile of Cars.</span>
+        <a class="rail-link" href="https://www.subarudalton.com/contactus.aspx">Contact us &rarr;</a>
       </div>
-      <div class="chip">
-        <div class="lbl">Contact</div>
-        <a class="tel" href="https://www.subarudalton.com/contactus.aspx"><strong style="font-family:var(--display); font-size:18px; line-height:1.2;">Dalton Subaru Contact Portal</strong></a>
-        <div class="sub">Confirm a car on the lot · book a visit</div>
-      </div>
-      <div class="chip">
-        <div class="lbl">Certified Pre-Owned</div>
-        <strong style="font-size:18px; line-height:1.2;">152-point inspection</strong>
-        <div class="sub">7-yr / 100k powertrain from in-service date</div>
-      </div>
-      <div class="chip">
-        <div class="lbl">Two ways to buy</div>
-        <strong style="font-size:18px; line-height:1.2;">Used &amp; CPO</strong>
-        <div class="sub">On one lot · drive your shortlist back to back</div>
+      <div class="rail-card">
+        <span class="lbl">Trust</span>
+        <strong>4.7 &#9733; · 4,448 reviews</strong>
+        <span class="sub">What second-hand buyers say about shopping here.</span>
       </div>
     </aside>
   </div>
@@ -1990,6 +2060,28 @@
   </div>
 </main>
 
+<!-- More from Dalton Subaru National City (related guides) -->
+<section class="sources" id="related-reading">
+  <div class="wrap">
+    <div class="article-grid" style="padding-top:0;">
+      <div></div>
+      <div class="body">
+        <div class="section-num"><span>&middot;</span><span>Related reading</span></div>
+        <h3>More from Dalton Subaru National City</h3>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">Still narrowing the shortlist? These guides help you compare trims, models, and what the used lane looks like here.</p>
+        <ul class="ext">
+          <li><a href="https://www.subarudalton.com/used-subaru-for-sale-national-city">Used Subaru for sale in National City</a>. The wider pre-owned picture, and what turns up on the lot week to week.</li>
+          <li><a href="https://www.subarudalton.com/subaru-crosstrek-for-sale">2026 Subaru Crosstrek for sale</a>. Gas and Hybrid trims side by side if a newer Crosstrek is in range.</li>
+          <li><a href="https://www.subarudalton.com/subaru-limited-vs-premium">Subaru Limited vs Premium</a>. Which trim National City buyers actually pick, and what the step up buys.</li>
+          <li><a href="https://www.subarudalton.com/is-subaru-the-best-car-brand">Is Subaru the best car brand in 2026?</a> What San Diego buyers weigh before committing to the badge.</li>
+          <li><a href="https://www.subarudalton.com/subaru-for-sale-national-city">Subaru for sale in National City</a>. Pick the right model across the full lineup, no pressure.</li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</section>
+
 <!-- Sources -->
 <section class="sources" id="sources">
   <div class="wrap">
@@ -2011,6 +2103,20 @@
 
         <p style="font-size:15px; color:var(--ink-soft); max-width:660px;"><em>If a question about buying a Subaru second hand at Dalton Subaru National City is not answered here, reach a sales advisor through the official <a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a>, or browse current used and CPO inventory at <a href="https://www.subarudalton.com/searchused.aspx" rel="noopener">subarudalton.com</a>.</em></p>
 
+        <h4 style="margin-top:28px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Next steps</h4>
+        <ul class="ext" style="margin-bottom:28px;">
+          <li><a href="https://www.subarudalton.com/searchused.aspx">Browse second-hand Subaru inventory</a></li>
+          <li><a href="https://www.subarudalton.com/searchused-national-city-ca.aspx">See used inventory in National City</a></li>
+          <li><a href="https://www.subarudalton.com/searchnew.aspx">Compare against new Subarus</a></li>
+          <li><a href="https://www.subarudalton.com/contactus.aspx">Reach the pre-owned team</a></li>
+        </ul>
+        <h4 style="margin-top:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Related reading</h4>
+        <ul class="ext" style="margin-bottom:28px;">
+          <li><a href="https://www.subarudalton.com/used-subaru-for-sale-national-city">Used Subaru for Sale in National City</a></li>
+          <li><a href="https://www.subarudalton.com/subaru-crosstrek-for-sale">2026 Subaru Crosstrek for Sale</a></li>
+          <li><a href="https://www.subarudalton.com/subaru-limited-vs-premium">Subaru Limited vs Premium</a></li>
+        </ul>
+        <h4 style="margin-top:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Sources and references</h4>
         <ul class="ext">
           <li><a href="https://www.subaru.com" rel="noopener" target="_blank">Subaru of America · Certified Pre-Owned program terms, 152-point inspection, and powertrain warranty</a></li>
           <li><a href="https://www.fueleconomy.gov" rel="noopener" target="_blank">U.S. Department of Energy · fueleconomy.gov, EPA city/highway ratings by model year</a></li>
@@ -2092,6 +2198,37 @@
     prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
     next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
   });
+</script>
+
+<script>
+/* Lot gallery carousels — supports multiple instances on one page */
+(function(){
+  document.querySelectorAll('[data-carousel]').forEach(function(root){
+    var track=root.querySelector('[data-track]');
+    if(!track) return;
+    var slides=Array.prototype.slice.call(track.children);
+    var thumbs=Array.prototype.slice.call(root.querySelectorAll('[data-thumbs] .lg-thumb'));
+    var countEl=root.querySelector('[data-count]');
+    var prev=root.querySelector('.lg-arrow.prev'), next=root.querySelector('.lg-arrow.next');
+    var n=slides.length, i=0;
+    function pad(x){ return (x<10?'0':'')+x; }
+    function go(idx){
+      i=(idx+n)%n;
+      track.style.transform='translateX('+(-i*100)+'%)';
+      if(countEl) countEl.textContent=pad(i+1)+' / '+pad(n);
+      thumbs.forEach(function(t,k){ t.classList.toggle('active',k===i); t.setAttribute('aria-selected',k===i?'true':'false'); });
+      slides.forEach(function(s,k){ s.setAttribute('aria-hidden',k===i?'false':'true'); });
+    }
+    if(prev) prev.addEventListener('click',function(){ go(i-1); });
+    if(next) next.addEventListener('click',function(){ go(i+1); });
+    thumbs.forEach(function(t,k){ t.addEventListener('click',function(){ go(k); }); });
+    root.addEventListener('keydown',function(e){
+      if(e.key==='ArrowLeft'){ e.preventDefault(); go(i-1); }
+      else if(e.key==='ArrowRight'){ e.preventDefault(); go(i+1); }
+    });
+    go(0);
+  });
+})();
 </script>
 </body>
 </html>
