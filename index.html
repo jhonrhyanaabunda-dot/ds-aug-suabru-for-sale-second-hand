@@ -1343,6 +1343,13 @@
   }
 
 
+  /* ---------- Grid overflow guard ----------
+     .body was rendering ~22px wider than its grid track, so its text ran under
+     the sticky gutter. Cap the column and let its children shrink. */
+  .article-grid > .body { width: 100%; max-width: 720px; min-width: 0; }
+  .article-grid > .body > * { min-width: 0; max-width: 100%; }
+  .article-grid > .gutter { min-width: 0; }
+
   /* ---------- Lot gallery carousel (real Dalton Subaru units) ---------- */
   .lot-gallery { margin:40px 0 8px }
   .lot-gallery .lg-head { display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 16px;flex-wrap:wrap }
